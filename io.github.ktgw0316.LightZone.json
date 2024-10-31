@@ -1,7 +1,7 @@
 {
     "id": "io.github.ktgw0316.LightZone",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "23.08",
+    "runtime-version": "24.08",
     "sdk": "org.freedesktop.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.openjdk17"
@@ -62,8 +62,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/06/5a/e11cad7b79f2cf3dd2ff8f81fa8ca667e7591d3d8451768589996b65dec1/lxml-4.9.2.tar.gz",
-                    "sha256": "2455cfaeb7ac70338b3257f41e21f0724f4b5b0c0e7702da67ee6c3640835b67"
+                    "url": "https://files.pythonhosted.org/packages/72/14/60bf9ba4b5c6d001af3b93be17a442deea8b1ce0eab2911de839cb0dfd3f/lxml-5.0.2.tar.gz",
+                    "sha256": "6399703c40ba53e2c3b72fdb56cb908d2b83c08082ecf17de839b27e68d1e598"
                 },
                 {
                     "type": "file",
@@ -74,7 +74,7 @@
                     /* used only for database*/
                     "dest": "lensfun-git",
                     "url": "https://github.com/lensfun/lensfun.git",
-                    "commit": "c661a4a6405bb63ad390a5bafc2d8d8e482c0355"
+                    "commit": "766ef7b02c72686deec3d766f931b5925122e9c3"
                 }
             ]
         },
@@ -87,8 +87,25 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.samba.org/pub/rsync/src/rsync-3.1.3.tar.gz",
-                    "sha256": "55cc554efec5fdaad70de921cd5a5eeb6c29a95524c715f3bbf849235b0800c0"
+                    "url": "https://download.samba.org/pub/rsync/src/rsync-3.3.0.tar.gz",
+                    "sha256": "7399e9a6708c32d678a72a63219e96f23be0be2336e50fd1348498d07041df90"
+                }
+            ]
+        },
+        {
+            "name": "libraw",
+            "config-opts": [
+                "--disable-static"
+            ],
+            "cleanup": [
+                "/bin",
+                "/share/doc"
+            ],
+            "sources": [
+                {
+                    "type" : "archive",
+                    "url" : "http://www.libraw.org/data/LibRaw-0.21.1.tar.gz",
+                    "sha256" : "630a6bcf5e65d1b1b40cdb8608bdb922316759bfb981c65091fec8682d1543cd"
                 }
             ]
         },
@@ -102,7 +119,7 @@
                 }
             },
             "build-commands": [
-                "ant -f linux/build.xml -Dno-ivy=true -Dno-submodule=true",
+                "ant -f linux/build.xml -Dno-ivy=true -Dno-submodule=false",
                 "install -Dm755 linux/products/lightzone -t $FLATPAK_DEST/bin",
                 "install -d $FLATPAK_DEST/share/java/lightzone",
                 "install -Dm755 lightcrafts/products/*.so -t $FLATPAK_DEST/lib/lightzone",
@@ -116,11 +133,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/ktgw0316/LightZone.git",
-                    "tag": "4.2.5"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/lz-build.patch"
+                    "tag": "5.0.0beta2",
+                    "commit": "e31073bb89a2748bdeab4f22047146706c8bac0f"
                 },
                 {
                     "type": "file",
