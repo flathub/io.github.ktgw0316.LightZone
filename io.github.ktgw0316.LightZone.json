@@ -93,6 +93,23 @@
             ]
         },
         {
+            "name": "libraw",
+            "config-opts": [
+                "--disable-static"
+            ],
+            "cleanup": [
+                "/bin",
+                "/share/doc"
+            ],
+            "sources": [
+                {
+                    "type" : "archive",
+                    "url" : "http://www.libraw.org/data/LibRaw-0.21.1.tar.gz",
+                    "sha256" : "630a6bcf5e65d1b1b40cdb8608bdb922316759bfb981c65091fec8682d1543cd"
+                }
+            ]
+        },
+        {
             "name": "lightzone",
             "buildsystem": "simple",
             "build-options": {
@@ -102,7 +119,7 @@
                 }
             },
             "build-commands": [
-                "ant -f linux/build.xml -Dno-ivy=true -Dno-submodule=true",
+                "ant -f linux/build.xml -Dno-ivy=true -Dno-submodule=false",
                 "install -Dm755 linux/products/lightzone -t $FLATPAK_DEST/bin",
                 "install -d $FLATPAK_DEST/share/java/lightzone",
                 "install -Dm755 lightcrafts/products/*.so -t $FLATPAK_DEST/lib/lightzone",
@@ -116,12 +133,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/ktgw0316/LightZone.git",
-                    "tag": "4.2.5",
-                    "commit": "2aadc9b96c8e5be3e0546cbb18f90e4b141a542d"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/lz-build.patch"
+                    "tag": "5.0.0beta2",
+                    "commit": "e31073bb89a2748bdeab4f22047146706c8bac0f"
                 },
                 {
                     "type": "file",
