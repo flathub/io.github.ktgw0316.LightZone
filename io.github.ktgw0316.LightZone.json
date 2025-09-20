@@ -1,7 +1,7 @@
 {
     "id": "io.github.ktgw0316.LightZone",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.openjdk17"
@@ -30,6 +30,7 @@
             "name": "lensfun",
             "buildsystem": "cmake-ninja",
             "config-opts": [
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
                 "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
                 "-DCMAKE_INSTALL_LIBDIR=/app/lib",
                 "-DBUILD_FOR_SSE=0",
@@ -81,6 +82,9 @@
         {
             "name": "rsync",
             "no-autogen": true,
+            "build-options": {
+                "cflags": "-std=c17"
+            },
             "cleanup": [
                 "*"
             ],
