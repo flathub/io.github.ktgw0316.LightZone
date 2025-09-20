@@ -97,6 +97,21 @@
             ]
         },
         {
+            "name": "gdk-scale",
+            "buildsystem": "simple",
+            "build-commands": [
+                "make",
+                "install -Dm755 gdk-scale -t /app/bin"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.com/hfiguiere/gdk-scale.git",
+                    "commit": "e6f7226cc8c0de09c8a101f3a2cacc0e9a5d77c0"
+                }
+            ]
+        },
+        {
             "name": "lightzone",
             "buildsystem": "simple",
             "build-options": {

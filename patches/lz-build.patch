@@ -1,5 +1,13 @@
+commit 3b5233a49a868e7583d82eedd2551daf987da729
+Author: Hubert Figuière <hub@figuiere.net>
+Date:   Sat Sep 20 00:29:17 2025 -0400
+
+    Flatpak build patch
+    
+    Signed-off-by: Hubert Figuière <hub@figuiere.net>
+
 diff --git a/lightcrafts/jnisrc/lensfun/LC_lensfun.cpp b/lightcrafts/jnisrc/lensfun/LC_lensfun.cpp
-index 34d12df..ff62311 100644
+index 34d12dfd..ff623110 100644
 --- a/lightcrafts/jnisrc/lensfun/LC_lensfun.cpp
 +++ b/lightcrafts/jnisrc/lensfun/LC_lensfun.cpp
 @@ -4,6 +4,7 @@
@@ -11,10 +19,15 @@ index 34d12df..ff62311 100644
  #include <omp.h>
  #include <jni.h>
 diff --git a/linux/products/lightzone b/linux/products/lightzone
-index a11e2ea..3e06672 100644
+index a11e2ea8..28847537 100644
 --- a/linux/products/lightzone
 +++ b/linux/products/lightzone
-@@ -9,7 +9,11 @@ java -version
+@@ -6,10 +6,16 @@ echo Starting LightZone version 4.2.5 ...
+ echo with options : ${@}
+ java -version
+ 
++export GDK_SCALE=`gdk-scale`
++
  arch=`getconf LONG_BIT`
  PLATFORM=`uname`
  if [ "${PLATFORM}" = "Linux" ]; then
