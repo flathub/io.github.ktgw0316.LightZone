@@ -4,7 +4,7 @@
     "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.openjdk17"
+        "org.freedesktop.Sdk.Extension.openjdk21"
     ],
     "rename-desktop-file": "lightzone.desktop",
     "rename-icon": "lightzone",
@@ -23,7 +23,7 @@
             "name": "openjdk",
             "buildsystem": "simple",
             "build-commands": [
-                "/usr/lib/sdk/openjdk17/install.sh"
+                "/usr/lib/sdk/openjdk21/install.sh"
             ]
         },
         {
@@ -32,7 +32,6 @@
             "config-opts": [
                 "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
                 "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-                "-DCMAKE_INSTALL_LIBDIR=/app/lib",
                 "-DBUILD_FOR_SSE=0",
                 "-DBUILD_FOR_SSE2=0"
             ],
@@ -50,7 +49,7 @@
                 "/lib/python3.*"
             ],
             "post-install": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} lxml --ignore-installed",
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} lxml --ignore-installed --no-build-isolation",
                 "python3 lensfun_convert_db.py $PWD lensfun-git/data/db",
                 "rm -rf /app/share/lensfun/version_1/*",
                 "tar xvf db/version_1.tar -C /app/share/lensfun/version_1"
@@ -72,10 +71,10 @@
                 },
                 {
                     "type": "git",
-                    /* used only for database*/
+                    "//":  "used only for database",
                     "dest": "lensfun-git",
                     "url": "https://github.com/lensfun/lensfun.git",
-                    "commit": "766ef7b02c72686deec3d766f931b5925122e9c3"
+                    "commit": "fcbfbf38e5c297fc5595705c2e61ff5b3eaeb9d9"
                 }
             ]
         },
@@ -110,37 +109,50 @@
                     "commit": "e6f7226cc8c0de09c8a101f3a2cacc0e9a5d77c0"
                 }
             ]
+         },
+         {
+            "name": "libraw",
+            "config-opts": [
+                "--disable-static"
+            ],
+            "cleanup": [
+                "/bin",
+                "/share/doc"
+            ],
+            "sources": [
+                {
+                    "type" : "archive",
+                    "url" : "http://www.libraw.org/data/LibRaw-0.22.1.tar.gz",
+                    "sha256" : "a789dc4e2409e2901d93793a4e0b80c7b49d0d97cf6ad71c850eb7616acfd786"
+                }
+            ]
         },
         {
             "name": "lightzone",
             "buildsystem": "simple",
             "build-options": {
-                "prepend-path": "/usr/lib/sdk/openjdk17/bin",
+                "prepend-path": "/usr/lib/sdk/openjdk21/bin",
                 "env": {
-                    "JAVA_HOME": "/usr/lib/sdk/openjdk17/jvm/openjdk-17"
+                    "JAVA_HOME": "/usr/lib/sdk/openjdk21/jvm/openjdk-21"
                 }
             },
             "build-commands": [
-                "ant -f linux/build.xml -Dno-ivy=true -Dno-submodule=true",
+                "ant -f linux/build.xml -Dno-ivy=true -Dno-submodule=false",
                 "install -Dm755 linux/products/lightzone -t $FLATPAK_DEST/bin",
                 "install -d $FLATPAK_DEST/share/java/lightzone",
                 "install -Dm755 lightcrafts/products/*.so -t $FLATPAK_DEST/lib/lightzone",
-                "install -Dm755 lightcrafts/products/dcraw_lz lightcrafts/products/LightZone-forkd -t $FLATPAK_DEST/share/java/lightzone",
+                "install -Dm755 lightcrafts/products/dcraw_lz -t $FLATPAK_DEST/share/java/lightzone",
                 "cp -pH linux/products/*.jar $FLATPAK_DEST/share/java/lightzone",
                 "install -Dm644 linux/products/lightzone.desktop -t $FLATPAK_DEST/share/applications",
                 "cp -pHR linux/icons $FLATPAK_DEST/share/",
-                "install -Dm644 io.github.ktgw0316.LightZone.metainfo.xml -t $FLATPAK_DEST/share/metainfo"
+                "install -Dm644 linux/products/io.github.ktgw0316.LightZone.metainfo.xml -t $FLATPAK_DEST/share/metainfo"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/ktgw0316/LightZone.git",
-                    "tag": "4.2.5",
-                    "commit": "2aadc9b96c8e5be3e0546cbb18f90e4b141a542d"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/lz-build.patch"
+                    "tag": "v5.0.0",
+                    "commit": "ffcc912a2fb20bf3ad434b4197d6f0e7ee863696"
                 },
                 {
                     "type": "file",
@@ -150,7 +162,28 @@
                 },
                 {
                     "type": "file",
-                    "path": "io.github.ktgw0316.LightZone.metainfo.xml"
+                    "url": "https://repo1.maven.org/maven2/com/github/openjson/openjson/1.0.13/openjson-1.0.13.jar",
+                    "sha256": "7d4184cf891f359ee72095a4ce1cb9cd8f3c676676dfe716ea89fab4d0e6e953",
+                    "dest": "lightcrafts/dependencies"
+                },
+                {
+                    "type": "file",
+                    "url": "https://repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar",
+                    "sha256": "7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832",
+                    "dest": "lightcrafts/dependencies"
+                },
+                {
+                    "type": "file",
+                    "url": "https://github.com/eclipse-imagen/imagen/releases/download/0.9.1/imagen-all-0.9.1.jar",
+                    "sha256": "f8958059011151a5e798598307005833fa0ab9a8ce7270a9e371e0f6d851cdbb",
+                    "dest": "lightcrafts/dependencies"
+                },
+                {
+                    "type": "patch",
+                    "paths": [
+                        "patches/lz-build.patch",
+                        "patches/lz-build2.patch"
+                    ]
                 }
             ]
         }

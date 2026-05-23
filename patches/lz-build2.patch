@@ -1,0 +1,47 @@
+diff --git a/lightcrafts/build.xml b/lightcrafts/build.xml
+index 546f8e25..5a9ff349 100644
+--- a/lightcrafts/build.xml
++++ b/lightcrafts/build.xml
+@@ -98,7 +98,7 @@
+     <mkdir dir="build/classes/java/main"/>
+     <mkdir dir="javah"/>
+     <javac srcdir="src/main/java" destdir="build/classes/java/main" includeantruntime="false" debug="true"
+-      release="17" nativeheaderdir="javah" classpathref="compile.classpath">
++      release="21" nativeheaderdir="javah" classpathref="compile.classpath">
+       <compilerarg value="-proc:full" />
+     </javac>
+   </target>
+diff --git a/linux/build.xml b/linux/build.xml
+index 9f04f189..a9c313eb 100755
+--- a/linux/build.xml
++++ b/linux/build.xml
+@@ -46,7 +46,7 @@
+     <mkdir dir="build/classes/java/main"/>
+     <mkdir dir="javah"/>
+     <javac destdir="build/classes/java/main" includeantruntime="false" debug="true"
+-           release="17" nativeheaderdir="javah">
++           release="21" nativeheaderdir="javah">
+       <src path="src/main/java"/>
+       <compilerarg value="-proc:full" />
+       <classpath>
+diff --git a/linux/products/io.github.ktgw0316.LightZone.metainfo.xml b/linux/products/io.github.ktgw0316.LightZone.metainfo.xml
+index b187539e..e18f026f 100644
+--- a/linux/products/io.github.ktgw0316.LightZone.metainfo.xml
++++ b/linux/products/io.github.ktgw0316.LightZone.metainfo.xml
+@@ -25,12 +25,15 @@
+   </description>
+   <screenshots>
+     <screenshot type="default">
+-      <image>https://github.com/hfiguiere/flathub/raw/7bf2b4da741e3e35e44eb5f4a5f16fd82b136812/screenshots/ligthzone-main.jpg</image>
++      <image>https://github.com/flathub/flathub/raw/7bf2b4da741e3e35e44eb5f4a5f16fd82b136812/screenshots/ligthzone-main.jpg</image>
+       <caption>Main Window</caption>
+     </screenshot>
+   </screenshots>
+   <launchable type="desktop-id">io.github.ktgw0316.LightZone.desktop</launchable>
+   <releases>
++    <release version="5.0.0" date="2026-05-23">
++      <url>https://github.com/ktgw0316/LightZone/releases/tag/5.0.0</url>
++    </release>
+     <release version="4.2.5" date="2023-01-05" type="stable">
+       <url>https://github.com/ktgw0316/LightZone/releases/tag/4.2.5</url>
+     </release>
