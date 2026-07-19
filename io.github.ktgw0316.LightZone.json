@@ -79,23 +79,6 @@
             ]
         },
         {
-            "name": "rsync",
-            "no-autogen": true,
-            "build-options": {
-                "cflags": "-std=c17"
-            },
-            "cleanup": [
-                "*"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.samba.org/pub/rsync/src/rsync-3.3.0.tar.gz",
-                    "sha256": "7399e9a6708c32d678a72a63219e96f23be0be2336e50fd1348498d07041df90"
-                }
-            ]
-        },
-        {
             "name": "gdk-scale",
             "buildsystem": "simple",
             "build-commands": [
@@ -137,52 +120,29 @@
                 }
             },
             "build-commands": [
-                "ant -f linux/build.xml -Dno-ivy=true -Dno-submodule=false",
-                "install -Dm755 linux/products/lightzone -t $FLATPAK_DEST/bin",
-                "install -d $FLATPAK_DEST/share/java/lightzone",
-                "install -Dm755 lightcrafts/products/*.so -t $FLATPAK_DEST/lib/lightzone",
-                "install -Dm755 lightcrafts/products/dcraw_lz -t $FLATPAK_DEST/share/java/lightzone",
-                "cp -pH linux/products/*.jar $FLATPAK_DEST/share/java/lightzone",
-                "install -Dm644 linux/products/lightzone.desktop -t $FLATPAK_DEST/share/applications",
-                "cp -pHR linux/icons $FLATPAK_DEST/share/",
-                "install -Dm644 linux/products/io.github.ktgw0316.LightZone.metainfo.xml -t $FLATPAK_DEST/share/metainfo"
+                "./gradlew jpackageImage -x test --offline",
+                "install -Dt /app/bin linux/products/lightzone",
+                "install -Dt /app/lib/lightzonem lightcrafts/build/resources/main/native/*.so",
+                "install -Dt /app/share/applications linux/products/lightzone.desktop -m644",
+                "install -Dt /app/share/java/lightzone lightcrafts/build/resources/main/native/dcraw_lz",
+                "install -t  /app/share/java/lightzone linux/build/jpackage/lightzone/lib/app/*.jar -m644",
+                "install -Dt /app/share/metainfo linux/products/${FLATPAK_ID}.metainfo.xml -m644",
+                "cp -a linux/icons /app/share/"
             ],
             "sources": [
+                "flatpak-sources.json",
+                "flatpak-plugin-sources.json",
                 {
                     "type": "git",
                     "url": "https://github.com/ktgw0316/LightZone.git",
-                    "tag": "v5.0.0",
-                    "commit": "ffcc912a2fb20bf3ad434b4197d6f0e7ee863696"
-                },
-                {
-                    "type": "file",
-                    "url": "https://repo.maven.apache.org/maven2/javax/help/javahelp/2.0.05/javahelp-2.0.05.jar",
-                    "sha256": "fcf4922d38ff85184f1d2328317bb60826e14da948abd606ee3d5b8c6a70debd",
-                    "dest": "lightcrafts/dependencies"
-                },
-                {
-                    "type": "file",
-                    "url": "https://repo1.maven.org/maven2/com/github/openjson/openjson/1.0.13/openjson-1.0.13.jar",
-                    "sha256": "7d4184cf891f359ee72095a4ce1cb9cd8f3c676676dfe716ea89fab4d0e6e953",
-                    "dest": "lightcrafts/dependencies"
-                },
-                {
-                    "type": "file",
-                    "url": "https://repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar",
-                    "sha256": "7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832",
-                    "dest": "lightcrafts/dependencies"
-                },
-                {
-                    "type": "file",
-                    "url": "https://github.com/eclipse-imagen/imagen/releases/download/0.9.1/imagen-all-0.9.1.jar",
-                    "sha256": "f8958059011151a5e798598307005833fa0ab9a8ce7270a9e371e0f6d851cdbb",
-                    "dest": "lightcrafts/dependencies"
+                    "tag": "v5.0.1",
+                    "commit": "7fa49816c4bbeb6a46caec11f600d16fa6d1de7c"
                 },
                 {
                     "type": "patch",
                     "paths": [
                         "patches/lz-build.patch",
-                        "patches/lz-build2.patch"
+                        "patches/gradle.patch"
                     ]
                 }
             ]
