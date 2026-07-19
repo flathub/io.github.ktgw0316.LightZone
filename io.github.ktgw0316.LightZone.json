@@ -122,7 +122,7 @@
             "build-commands": [
                 "./gradlew jpackageImage -x test --offline",
                 "install -Dt /app/bin linux/products/lightzone",
-                "install -Dt /app/lib/lightzonem lightcrafts/build/resources/main/native/*.so",
+                "install -Dt /app/lib/lightzone lightcrafts/build/resources/main/native/*.so",
                 "install -Dt /app/share/applications linux/products/lightzone.desktop -m644",
                 "install -Dt /app/share/java/lightzone lightcrafts/build/resources/main/native/dcraw_lz",
                 "install -t  /app/share/java/lightzone linux/build/jpackage/lightzone/lib/app/*.jar -m644",
