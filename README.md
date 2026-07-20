@@ -5,7 +5,7 @@ Flatpak for LightZone.
 
 https://github.com/ktgw0316/LightZone
 
-Uses JAVA 17.
+Uses JAVA 21.
 
 Permissions
 -----------
@@ -32,6 +32,11 @@ Source is from git because submodules are needed.
 `javahelp2` is needed but not provided with dependencies. Seems that
 it's put in the right location.
 
-Install steps are guess from packaging scripts.
+To generate `flatpak-sources.json` (a list of required jar files),
+run `./gradlew flatpakGradleGenerator --no-configuration-cache`
+in the LightZone source code directory.
+(See https://github.com/jwharm/flatpak-gradle-generator for more information.)
+The flatpak-gradle-generator can't list gradle-bin.zip and some of the plugin jars,
+so they should be manually added into `flatpak-plugin-sources.json`.
 
 Fonts look ugly. Maybe it's just Java.
