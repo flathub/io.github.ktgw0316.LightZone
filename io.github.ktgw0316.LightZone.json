@@ -18,6 +18,11 @@
         "--env=PATH=/app/jre/bin:/app/bin:/usr/bin"
     ],
     "command": "lightzone",
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "*.la"
+    ],
     "modules": [
         {
             "name": "openjdk",
