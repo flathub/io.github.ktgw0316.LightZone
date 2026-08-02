@@ -36,13 +36,6 @@
   },
   {
     "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.pom",
-    "sha512": "fe4b58ec957920026916ddf034cf6e200e17310da01bc58bfa176d06d14f084a64f195701f68cf62ddd656f33cd9ff66bab8705059a67b5a2ece86e5addbea15",
-    "dest": "./offline-repository/com/fasterxml/jackson/core/jackson-annotations/2.21",
-    "dest-filename": "jackson-annotations-2.21.pom"
-  },
-  {
-    "type": "file",
     "url": "https://repo.maven.apache.org/maven2/com/formdev/flatlaf-intellij-themes/3.7.1/flatlaf-intellij-themes-3.7.1.jar",
     "sha512": "0e76edd268cff8dcd1765e043a36b0388e53612699aa868960e2d3f5b321bffff46043b516e00c76d3c015539a25f98d58f1bae5f1eecc1ef0b135164f6cc93a",
     "dest": "./offline-repository/com/formdev/flatlaf-intellij-themes/3.7.1",
@@ -110,27 +103,6 @@
     "sha512": "150f8b8c348e8d61e3d9f2bcdafbe1df9631440e5aa9e79d1b8c502294242e066c5c06422f46b7758abcb5a9533c43dc43724c37b7633e41ab49a82233a9f5f7",
     "dest": "./offline-repository/com/github/ajalt/mordant/1.2.1",
     "dest-filename": "mordant-1.2.1.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/github/ben-manes/caffeine/caffeine/3.2.3/caffeine-3.2.3.jar",
-    "sha512": "7aa65de1cb087aa645d7217bd3162b3842fe40914b590238afc681b1d8b33647efb1fd948d21ed0210a40d4bbda882ed24f3e6d326f9a03131660ae9778bbb7b",
-    "dest": "./offline-repository/com/github/ben-manes/caffeine/caffeine/3.2.3",
-    "dest-filename": "caffeine-3.2.3.jar"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/github/ben-manes/caffeine/caffeine/3.2.3/caffeine-3.2.3.module",
-    "sha512": "a4d4b4359f2519d8cdf34037bb0b4b4a76885e884f9d4a67c455999a2fc4409cc52a414972290ebf22ff44b9392447fec40255f265a6541a626fc5997c9de1b3",
-    "dest": "./offline-repository/com/github/ben-manes/caffeine/caffeine/3.2.3",
-    "dest-filename": "caffeine-3.2.3.module"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/github/ben-manes/caffeine/caffeine/3.2.3/caffeine-3.2.3.pom",
-    "sha512": "8a8edc2bcc60cf42e91ff28f78f58e3f43658d98ac686abed1e09fe67c5c1018e941e295ad5cf11698f77ae04dc0e85299cc9efaa985eb560cc1647bd2d59977",
-    "dest": "./offline-repository/com/github/ben-manes/caffeine/caffeine/3.2.3",
-    "dest-filename": "caffeine-3.2.3.pom"
   },
   {
     "type": "file",
@@ -225,13 +197,6 @@
   },
   {
     "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/errorprone/error_prone_annotations/2.43.0/error_prone_annotations-2.43.0.pom",
-    "sha512": "9769e5cf246a23581de8b3014d8620134c59ff7f393d19307f3fd8fde1de0b8d37c8474d26aedf47610c43016adfe19b875747a19245fa755bf24a34f71da5d4",
-    "dest": "./offline-repository/com/google/errorprone/error_prone_annotations/2.43.0",
-    "dest-filename": "error_prone_annotations-2.43.0.pom"
-  },
-  {
-    "type": "file",
     "url": "https://plugins.gradle.org/m2/com/google/errorprone/error_prone_annotations/2.48.0/error_prone_annotations-2.48.0.jar",
     "sha512": "1692b210d2b4c1d446da1d86ee787be1c3be56ee8c5f4274f20ef126b57c444a403464df7b9dfdf10bccbe7e0432247ecffe615fbc30d16be7a3282cb2556d34",
     "dest": "./offline-repository/com/google/errorprone/error_prone_annotations/2.48.0",
@@ -253,157 +218,31 @@
   },
   {
     "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar",
-    "sha512": "72be228e7805da5623e42bf024ded7d9147023c66b22f4dbd04ac6898201af46ee82e1f92ea51eb0595f1b49151c4b8ecb862653d4906c17609c42544ee97abf",
-    "dest": "./offline-repository/com/google/guava/failureaccess/1.0.3",
-    "dest-filename": "failureaccess-1.0.3.jar"
+    "url": "https://plugins.gradle.org/m2/com/gorylenko/gradle-git-properties/com.gorylenko.gradle-git-properties.gradle.plugin/4.0.1/com.gorylenko.gradle-git-properties.gradle.plugin-4.0.1.pom",
+    "sha512": "1067fd607bf258620ae01aa1ac85ef5a435c4efa15ac31a07513dc84b1a1b3f1c5897bda5caedd47fc7bb116156468417db58b9aef35cf640d2f907c5bb5b782",
+    "dest": "./offline-repository/com/gorylenko/gradle-git-properties/com.gorylenko.gradle-git-properties.gradle.plugin/4.0.1",
+    "dest-filename": "com.gorylenko.gradle-git-properties.gradle.plugin-4.0.1.pom"
   },
   {
     "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.pom",
-    "sha512": "457683a8f293ec0a41eee3efec5dc6253d9dc7c67159e2fe7a0444dc57bdc43a76e9d1b924d0a1685d42dc55fb28b2ee13100be55565ce9c5b96273f96f74df8",
-    "dest": "./offline-repository/com/google/guava/failureaccess/1.0.3",
-    "dest-filename": "failureaccess-1.0.3.pom"
+    "url": "https://plugins.gradle.org/m2/com/gorylenko/gradle-git-properties/gradle-git-properties/4.0.1/gradle-git-properties-4.0.1.jar",
+    "sha512": "e18d86bfcab19acf7526c6f923dee5972b117a8ee0bbfb47ea3495c178eb02132813103f38816c7e6008706bdae554dc3919ba0edd2a6753672b14e61b586327",
+    "dest": "./offline-repository/com/gorylenko/gradle-git-properties/gradle-git-properties/4.0.1",
+    "dest-filename": "gradle-git-properties-4.0.1.jar"
   },
   {
     "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom",
-    "sha512": "1d786f14fbfa5c90eedcc160d1e0a71acb2141f372049b22ce62b0bd1e883c17cc24a59dc8b00e5037e959cccdb54d4d8dc8f252302d4bb7ce82dfdaff764476",
-    "dest": "./offline-repository/com/google/guava/guava-parent/26.0-android",
-    "dest-filename": "guava-parent-26.0-android.pom"
+    "url": "https://plugins.gradle.org/m2/com/gorylenko/gradle-git-properties/gradle-git-properties/4.0.1/gradle-git-properties-4.0.1.module",
+    "sha512": "14b08af2bdab1610da0b9e319cdb283fcfe36ebc3fa9296974b08326d0f2e1281a9ab983c890b8c0830d56a48db1e5a1b4c0d87b4493ef0195723ca89a46c158",
+    "dest": "./offline-repository/com/gorylenko/gradle-git-properties/gradle-git-properties/4.0.1",
+    "dest-filename": "gradle-git-properties-4.0.1.module"
   },
   {
     "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/guava/guava-parent/33.4.0-android/guava-parent-33.4.0-android.pom",
-    "sha512": "730dc89ab67d443d2cfe1bedbe377b792fd76f3d1eba04142a0a5b91f6c943670566551316be0e37a464efa1f61e3e9d2669777ae08dad27435b3d6398f106b8",
-    "dest": "./offline-repository/com/google/guava/guava-parent/33.4.0-android",
-    "dest-filename": "guava-parent-33.4.0-android.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/guava/guava-parent/33.5.0-jre/guava-parent-33.5.0-jre.pom",
-    "sha512": "2be50ed9ae1e9db5397a209428363905222578d573c9ae674d9607c15f17e0646b176498e30a3b62185cb78dd6c6a7b5ee09b901bd97c7752958437093883eae",
-    "dest": "./offline-repository/com/google/guava/guava-parent/33.5.0-jre",
-    "dest-filename": "guava-parent-33.5.0-jre.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/guava/guava/33.5.0-jre/guava-33.5.0-jre.jar",
-    "sha512": "994a4dbcbd8e528ad3b4a7acf49b631a40dcebb03d9a8f5e1d3b74351f805f77774e9a19f7233e42036cb415b7838710f207ac1e18335e4a219b7f99ea22a44f",
-    "dest": "./offline-repository/com/google/guava/guava/33.5.0-jre",
-    "dest-filename": "guava-33.5.0-jre.jar"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/guava/guava/33.5.0-jre/guava-33.5.0-jre.module",
-    "sha512": "b3c90b24fa98c1e5858e45f8c4aa9e826bfadf6f030d277248ca5c29e1c0debfea8fa385a1af38b355a97125f6508a96b5a6dad3ae071ac054ac588125a16eaf",
-    "dest": "./offline-repository/com/google/guava/guava/33.5.0-jre",
-    "dest-filename": "guava-33.5.0-jre.module"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/guava/guava/33.5.0-jre/guava-33.5.0-jre.pom",
-    "sha512": "d8600ca7a7bd304d33887ae6d06e2815da95bb726edda307ba5b7aa1362ab108aa619a1c0a8b463e3489cd3a95a7c9da9e6397e212f82cf513ef8c8e9e31aee6",
-    "dest": "./offline-repository/com/google/guava/guava/33.5.0-jre",
-    "dest-filename": "guava-33.5.0-jre.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
-    "sha512": "c5987a979174cbacae2e78b319f080420cc71bcdbcf7893745731eeb93c23ed13bff8d4599441f373f3a246023d33df03e882de3015ee932a74a774afdd0782f",
-    "dest": "./offline-repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava",
-    "dest-filename": "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.pom",
-    "sha512": "140544970539199c860d5e7e2d8096bbccd55980602773f29e8d74ab4f3e24c43aa369b0c7d06b026ba7a9db3353be285d7ffb9cd94b2bedf62820c3fdfd1d5f",
-    "dest": "./offline-repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava",
-    "dest-filename": "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/j2objc/j2objc-annotations/3.1/j2objc-annotations-3.1.jar",
-    "sha512": "34ee5aad57b0b507e89c897306f73043f80fa0eb02b453e54d9052feb0808a0d2ed835d888946211921d2bf733780b19ff636479ce19b9f48814ba6008733ce1",
-    "dest": "./offline-repository/com/google/j2objc/j2objc-annotations/3.1",
-    "dest-filename": "j2objc-annotations-3.1.jar"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/google/j2objc/j2objc-annotations/3.1/j2objc-annotations-3.1.pom",
-    "sha512": "0d5dca1f36e5a17b3a42d716a778dd5f53655f653e25f2b3002260fa26018186c310c930c35d01fc8ba180e03c9aba82037ba0cfa0cefe82f542316717428371",
-    "dest": "./offline-repository/com/google/j2objc/j2objc-annotations/3.1",
-    "dest-filename": "j2objc-annotations-3.1.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/gradle/develocity-gradle-plugin-adapters/1.2.1/develocity-gradle-plugin-adapters-1.2.1.pom",
-    "sha512": "9aa4f876525468bcac24237967392b2b702110b794241e33d5e53ed4c01c9198055a9f645b69d311389ca342ece00b76f2eeef0849789e6e2d6c8d99c912dd6a",
-    "dest": "./offline-repository/com/gradle/develocity-gradle-plugin-adapters/1.2.1",
-    "dest-filename": "develocity-gradle-plugin-adapters-1.2.1.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/palantir/git-version/com.palantir.git-version.gradle.plugin/5.0.0/com.palantir.git-version.gradle.plugin-5.0.0.pom",
-    "sha512": "9180c26e9285e83be2d52c8a5f9dd01798952211bc55c8e6cba0a712831649d5d92a4fda3b39ef1637fe9b46ddf24b6ac8232ae48eb77b2f64d585585a309e74",
-    "dest": "./offline-repository/com/palantir/git-version/com.palantir.git-version.gradle.plugin/5.0.0",
-    "dest-filename": "com.palantir.git-version.gradle.plugin-5.0.0.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/palantir/gradle/gitversion/gradle-git-version/5.0.0/gradle-git-version-5.0.0.jar",
-    "sha512": "87493c104253f4921109fc5fbbfd4f96e2953b45f1503f0c61686619ccacbfe0689009e38419cbb1ac936f16749bb914675cdc56e31066328f6ffdad9ae95c97",
-    "dest": "./offline-repository/com/palantir/gradle/gitversion/gradle-git-version/5.0.0",
-    "dest-filename": "gradle-git-version-5.0.0.jar"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/palantir/gradle/gitversion/gradle-git-version/5.0.0/gradle-git-version-5.0.0.pom",
-    "sha512": "feca9a9c9ad76049fc793a08d2284021486fba975ef22d49e7cde3a4c217c1c0a4dd86f4e794fc148a372db79338c6462ff284f448fa2b5d1cd184aa38377d2d",
-    "dest": "./offline-repository/com/palantir/gradle/gitversion/gradle-git-version/5.0.0",
-    "dest-filename": "gradle-git-version-5.0.0.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/palantir/gradle/utils/environment-variables/0.23.0/environment-variables-0.23.0.jar",
-    "sha512": "02eb7c97c3c05072b660c3c2d7296e97c329b21d49cb13e20ca36170457d1dc9446fcf4168d73dab39a1ff86f8aa5f924c94c13a8d95773075bb9b5d2417d37a",
-    "dest": "./offline-repository/com/palantir/gradle/utils/environment-variables/0.23.0",
-    "dest-filename": "environment-variables-0.23.0.jar"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/palantir/gradle/utils/environment-variables/0.23.0/environment-variables-0.23.0.pom",
-    "sha512": "ef81d303e0a15dd36fc1622e66f2808221183203d0550e40c823b75c4606ed46ca0f547438602d80abe8aa5871ca85880e431225ac91dd6ad7584f15535864f1",
-    "dest": "./offline-repository/com/palantir/gradle/utils/environment-variables/0.23.0",
-    "dest-filename": "environment-variables-0.23.0.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/palantir/gradle/utils/exec/0.23.0/exec-0.23.0.jar",
-    "sha512": "fc31bdf43c09b269f109fd49f6b133dcb9c923fd506804398a10705684b95aeb8050660a287cbcbba574722e84d5fb8ac45acb855ba1f5616f1a16ed55761934",
-    "dest": "./offline-repository/com/palantir/gradle/utils/exec/0.23.0",
-    "dest-filename": "exec-0.23.0.jar"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/palantir/gradle/utils/exec/0.23.0/exec-0.23.0.pom",
-    "sha512": "1df661ebc1df20e00719481e167fd08eff4f34d235c94198a04c54bee13cfa61dff2f8a31e1c0790016eeeb8cd6b147a3cdd597e719dc6f6e704f798dfb1761e",
-    "dest": "./offline-repository/com/palantir/gradle/utils/exec/0.23.0",
-    "dest-filename": "exec-0.23.0.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/palantir/gradle/utils/providers/0.23.0/providers-0.23.0.jar",
-    "sha512": "73647c82f067630c7a1c9d7e2dd1d6e335c3a9d08693eb9a9f3ecad5dad88ecf85a085d45e347d9df7ce49aff54c042c4d5daa6a153843aa7015de44107c315d",
-    "dest": "./offline-repository/com/palantir/gradle/utils/providers/0.23.0",
-    "dest-filename": "providers-0.23.0.jar"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/com/palantir/gradle/utils/providers/0.23.0/providers-0.23.0.pom",
-    "sha512": "603eef9299df5445ff61c500425fff0ab8fd5ee3eff8996a1daea6b7dfb9ca1dfe74699d52a2f69e10ad0bb7ecdd7746288b7750699d3f8ac7c36e9ba0e6bf97",
-    "dest": "./offline-repository/com/palantir/gradle/utils/providers/0.23.0",
-    "dest-filename": "providers-0.23.0.pom"
+    "url": "https://plugins.gradle.org/m2/com/gorylenko/gradle-git-properties/gradle-git-properties/4.0.1/gradle-git-properties-4.0.1.pom",
+    "sha512": "bbcc5517efdeb743dc560e7e701822359fa16febc78bf2ea0458fd89c00e1c8f64e85d19551c00cd0de0a7ccb84e3633ca3c9739048dd3a6aa2778dd98cdf49b",
+    "dest": "./offline-repository/com/gorylenko/gradle-git-properties/gradle-git-properties/4.0.1",
+    "dest-filename": "gradle-git-properties-4.0.1.pom"
   },
   {
     "type": "file",
@@ -936,13 +775,6 @@
     "sha512": "f9c51df0c2fe13df83b429f98bb1a72b85c5653cb7d750f5936ae0d854076e643ed1c3640b23ed96d002aea33a66453b6817fab3fa72dbafc3206e2522f12118",
     "dest": "./offline-repository/net/java/dev/jna/jna/5.9.0",
     "dest-filename": "jna-5.9.0.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.pom",
-    "sha512": "25e43253bdd776fc620a45df322987f8b5f2629d195bd76cee896effdbebd34d9f3179fe0f7078f0b57ac5623924544740ddb15383997e22881689875db581ec",
-    "dest": "./offline-repository/org/apache/commons/commons-lang3/3.20.0",
-    "dest-filename": "commons-lang3-3.20.0.pom"
   },
   {
     "type": "file",
@@ -1496,13 +1328,6 @@
     "sha512": "12c2b82ed8c1fc6794fe17f5f2f31ed3ded4d8353d24c4480b2f1415b6c10f6969a70ca9e758e14d94028ee46af1f6f294a17046edcfd8b0ea9f223e2733164d",
     "dest": "./offline-repository/org/gradle/kotlin/kotlin-dsl/org.gradle.kotlin.kotlin-dsl.gradle.plugin/6.6.4",
     "dest-filename": "org.gradle.kotlin.kotlin-dsl.gradle.plugin-6.6.4.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/org/immutables/value/2.12.1/value-2.12.1.pom",
-    "sha512": "abd70fcf41c3ad0d62d57e1d02850bfbcb9bfea8cc0b755144b6333afbf29f28e57382e0bc9223de9cc0249d7f05024175030d6b15adae1eb3f930f518d8c89d",
-    "dest": "./offline-repository/org/immutables/value/2.12.1",
-    "dest-filename": "value-2.12.1.pom"
   },
   {
     "type": "file",
@@ -2528,27 +2353,6 @@
   },
   {
     "type": "file",
-    "url": "https://plugins.gradle.org/m2/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar",
-    "sha512": "efded31ef5b342f09422935076e599789076431e93a746685c0607e7de5592719ba6aacde0be670b3f064d1e85630d58d5bce6b34aed2a288fdb34f745efb7bc",
-    "dest": "./offline-repository/org/jspecify/jspecify/1.0.0",
-    "dest-filename": "jspecify-1.0.0.jar"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.module",
-    "sha512": "02669b1c62e0c6988dd812b89201acbe6dad796f3573d6e626d2f56d2194896e198bf3998f0618019b722c7b0c93f013528bff1118f835154f2bd61c17e67b77",
-    "dest": "./offline-repository/org/jspecify/jspecify/1.0.0",
-    "dest-filename": "jspecify-1.0.0.module"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.pom",
-    "sha512": "291d8fb333121ba18ebd427e7ee5e98694be797b8280a228be7c4958af934b2465f341957248dcd396f5ffbe99dd9a65aa61cef70ca772ee37a92c3d20e41f32",
-    "dest": "./offline-repository/org/jspecify/jspecify/1.0.0",
-    "dest-filename": "jspecify-1.0.0.pom"
-  },
-  {
-    "type": "file",
     "url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.14.2/junit-bom-5.14.2.module",
     "sha512": "7ae493a46b924d3ac601b97867cb24044aa74e0c6d35de23a06a9b0ba5439de9ed23ea69c67038bc797d9131c744e39e67e4d715c62bfc533df716e15130393e",
     "dest": "./offline-repository/org/junit/junit-bom/5.14.2",
@@ -2868,12 +2672,5 @@
     "sha512": "5b16a209843c18a478a0a16dff83ae1c75eedbdeadc15a958d536a36631d4d39a9998e085c165a79ced8ad187f021e2f3cd4068856ca174db35657ef5a473c5a",
     "dest": "./offline-repository/org/slf4j/slf4j-parent/2.0.17",
     "dest-filename": "slf4j-parent-2.0.17.pom"
-  },
-  {
-    "type": "file",
-    "url": "https://plugins.gradle.org/m2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom",
-    "sha512": "1c4f18cacd3a9f99a168bd20845d12d94824e66b5caebe57c164b6ac3dc89803508f60e35c4d1da81d3f3866c89ed407826f0d108f1e624c2d8a258e01e1064a",
-    "dest": "./offline-repository/org/sonatype/oss/oss-parent/9",
-    "dest-filename": "oss-parent-9.pom"
   }
 ]

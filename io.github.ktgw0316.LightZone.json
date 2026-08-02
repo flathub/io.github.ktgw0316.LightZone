@@ -140,8 +140,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/ktgw0316/LightZone.git",
-                    "tag": "v5.0.1",
-                    "commit": "7fa49816c4bbeb6a46caec11f600d16fa6d1de7c"
+                    "tag": "v5.0.2",
+                    "commit": "9def5f9d3b0ed3443faaf5ad85e5720420e80b8a"
                 },
                 {
                     "type": "patch",
